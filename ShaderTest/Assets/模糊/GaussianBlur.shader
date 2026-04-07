@@ -1,6 +1,7 @@
 Shader "CDT/GaussianBlur"
 {
     Properties{
+    	[PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
         _PixelateFade("Pixelate: Fade", Range( 0 , 1)) = 1
         _PixelatePixelsPerUnit("Pixelate: Pixels Per Unit", Float) = 100
         _PixelatePixelDensity("Pixelate: Pixel Density", Float) = 16

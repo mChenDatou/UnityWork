@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CDT_GaussianBlur
-  m_Shader: {fileID: 4800000, guid: 04c6b5cde7538b748b9ee493842cf42b, type: 3}
+  m_Name: CDT_Shine
+  m_Shader: {fileID: 4800000, guid: 7be5af4af172df74d97c5619084a466d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -27,11 +27,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShineMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlurSize: 2.1
-    - _PixelateFade: 0
-    - _PixelatePixelDensity: 4
-    - _PixelatePixelsPerUnit: 100
-    m_Colors: []
+    - _PixelsPerUnit: 100
+    - _ShineContrast: 2
+    - _ShineFade: 1
+    - _ShineFrequency: 0.3
+    - _ShineMaskToggle: 0
+    - _ShineRotation: 30
+    - _ShineSaturation: 0.41
+    - _ShineSmooth: 1
+    - _ShineSpeed: 5
+    - _ShineWidth: 0.1
+    m_Colors:
+    - _ShineColor: {r: 11.98431, g: 11.98431, b: 11.98431, a: 0}
   m_BuildTextureStacks: []
