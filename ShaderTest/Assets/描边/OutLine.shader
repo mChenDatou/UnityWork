@@ -104,10 +104,9 @@ Shader "CDT/OutLine"
 				float linValue16_g12064 = tex2D( _UberNoiseTexture,  (  _Time.y * _OuterOutlineNoiseSpeed  + texCoord435 ) * _OuterOutlineNoiseScale  ).r;
 				float localMyCustomExpression16_g12064 = MyCustomExpression16_g12064( linValue16_g12064 );
 				float2 staticSwitch157_g12063 = ( localMyCustomExpression16_g12064 - 0.5 ) * _OuterOutlineDistortionIntensity;
-				//float2 staticSwitch157_g12063 = float2( 0,0 );
-				float2 temp_output_131_0_g12063 = staticSwitch157_g12063 + texCoord435;
 				float2 appendResult2_g12065 = float2(_MainTex_TexelSize.z , _MainTex_TexelSize.w);
 				float2 temp_output_25_0_g12063 = 100.0 / appendResult2_g12065;
+				float2 temp_output_131_0_g12063 = texCoord435 + staticSwitch157_g12063 * temp_output_25_0_g12063;
 				float lerpResult168_g12063 = lerp( staticSwitch8_g11874.a , min( ( max( max( max( max( max( max( max( tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( 0,-1 ) ) * temp_output_25_0_g12063 ) ) ).a , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( 0,1 ) ) * temp_output_25_0_g12063 ) ) ).a ) , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( -1,0 ) ) * temp_output_25_0_g12063 ) ) ).a ) , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( 1,0 ) ) * temp_output_25_0_g12063 ) ) ).a ) , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( 0.705,0.705 ) ) * temp_output_25_0_g12063 ) ) ).a ) , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( -0.705,0.705 ) ) * temp_output_25_0_g12063 ) ) ).a ) , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( 0.705,-0.705 ) ) * temp_output_25_0_g12063 ) ) ).a ) , tex2D( _MainTex, ( temp_output_131_0_g12063 + ( ( _OuterOutlineWidth * float2( -0.705,-0.705 ) ) * temp_output_25_0_g12063 ) ) ).a ) * 3.0 ) , 1.0 ) , _OuterOutlineFade);
 				float staticSwitch200_g12063 = lerp(1, temp_output_182_0_g12063, step(0.5 ,_OuterOutlineOutlineOnlyToggle)) * lerpResult168_g12063;
 				float4 appendResult174_g12063 = float4(lerpResult170_g12063 , staticSwitch200_g12063);
