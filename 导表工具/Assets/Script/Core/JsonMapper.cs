@@ -1,30 +1,16 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public class JsonMapper
 {
-    [System.Serializable]
-    private class Wrapper<T>
-    {
-        public T[] array;
-    }
-    
-    public static T[] ToArray<T>(string text)
-    {
-        var newJson = "{ \"array\": " + text + "}";
-        var wrapper = JsonUtility.FromJson<Wrapper<T>>(newJson);
-        return wrapper.array;
-    }
-
     public static IJsonDic<T> ToDictionary<T>(string text)
     {
         var re = new IJsonDic<T>();
         //这里报错, 导表是数组, 最后一组元素 括号{} 后面的逗号, 去掉
-        var datas = ToArray<T>(text);
+        var datas = LitJson.JsonMapper.ToObject<T[]>(text);
         foreach (var data in datas)
         {
             var info = data.GetType().GetField("id");
-            var idStr = (int)info.GetValue(data);
+            var idStr = int.Parse(info.GetValue(data).ToString());
             re.Add(idStr, data);
         }
         return re;
