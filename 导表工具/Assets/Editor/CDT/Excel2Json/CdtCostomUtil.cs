@@ -53,7 +53,10 @@ namespace CDT
                 string[] excelFiles = Directory.GetFiles($"{projectPath}/Excel", "*.xlsx");
                 foreach (var excel in excelFiles)
                 {
-                    Excel2Json.Run(excel, configPath, csPath);
+                    if (!Path.GetFileName(excel).Contains("~"))
+                    {
+                        Excel2Json.Run(excel, configPath, csPath);
+                    }
                 }
                 Debug.Log("导出配置完成");
             }
