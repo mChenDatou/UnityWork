@@ -7,7 +7,7 @@ namespace CDT
     /// <summary>
     /// GameFrame框架工具菜单
     /// </summary>
-    public class MyMenuItems
+    public partial class MyMenuItems
     {
         [MenuItem("★工具★/导表/一键导表", false, 2)]
         public static void AutoExcel2Json()
@@ -15,14 +15,11 @@ namespace CDT
             try
             {
                 string projectPath = Directory.GetParent(Application.dataPath).FullName;
-                string exePath = $"{projectPath}/excel2json/Excel2json.exe";
                 string configPath = $"{projectPath}/Assets/Config/";
                 string csPath = $"{projectPath}/Assets/Scripts/Config/";
                 
-                
                 configPath = configPath.Replace('/', Path.DirectorySeparatorChar);
                 csPath = csPath.Replace('/', Path.DirectorySeparatorChar);
-                exePath = exePath.Replace('/', Path.DirectorySeparatorChar);
                 
                 // 删除csPath路径下的所有文件
                 if (Directory.Exists(csPath))
@@ -30,9 +27,13 @@ namespace CDT
                     string[] csFiles = Directory.GetFiles(csPath);
                     foreach (var csFile in csFiles)
                     {
+                        if (Path.GetExtension(csFile).ToLower() == ".meta")
+                        {
+                            continue;
+                        }
                         File.Delete(csFile);
                     }
-                    Debug.Log($"已清空目录: {csPath}");
+                    //Debug.Log($"已清空目录: {csPath}");
                 }
                 
                 // 删除configPath路径下的所有文件
@@ -41,17 +42,18 @@ namespace CDT
                     string[] cfFiles = Directory.GetFiles(configPath);
                     foreach (var csFile in cfFiles)
                     {
+                        if (Path.GetExtension(csFile).ToLower() == ".meta")
+                        {
+                            continue;
+                        }
                         File.Delete(csFile);
                     }
-                    Debug.Log($"已清空目录: {configPath}");
+                    //Debug.Log($"已清空目录: {configPath}");
                 }
-                
                 string[] excelFiles = Directory.GetFiles($"{projectPath}/Excel", "*.xlsx");
                 foreach (var excel in excelFiles)
                 {
-                    string fileName = Path.GetFileNameWithoutExtension(excel);
-                    string cmdStr = $" -e {excel} -j {configPath} -p {csPath} -h 3 -a true -x # -c true";
-                    System.Diagnostics.Process.Start(exePath, @cmdStr);
+                    Excel2Json.Run(excel, configPath, csPath);
                 }
                 Debug.Log("导出配置完成");
             }
@@ -60,7 +62,10 @@ namespace CDT
                 Debug.LogError(ex.Message);
                 throw;
             }
-            //AssetDatabase.Refresh();
+            AssetDatabase.Refresh();
         }
+
+
     }
+
 }

@@ -1,0 +1,189 @@
+[
+  {
+    "id": 1000,
+    "en": "$",
+    "fr": "€",
+    "ja": "¥",
+    "kr": "원",
+    "pt": "R$",
+    "ru": "₽",
+    "es": "€",
+    "de": "€"
+  },
+  {
+    "id": 1001,
+    "en": "BET",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1002,
+    "en": "SPIN",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1003,
+    "en": "HOLD FOR AUTO",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1004,
+    "en": "BALANCE",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1005,
+    "en": "WIN",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1006,
+    "en": "CLAIM",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1007,
+    "en": "SETTING",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1008,
+    "en": "Game Rules",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1009,
+    "en": "Privacy Policy",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1010,
+    "en": "BACK TO GAME",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1011,
+    "en": "PAY TABLE",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1012,
+    "en": "Substitutes for any other symbol.",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1013,
+    "en": "If a bonus symbol lands in the top position of reel 3. <br>The grid wheel spins and awards the corresponding bonus.",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1014,
+    "en": "Click spin to start",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1015,
+    "en": "Choose of betting slots",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  },
+  {
+    "id": 1016,
+    "en": "Rewards earned can be cashed out for real",
+    "fr": "",
+    "ja": "",
+    "kr": "",
+    "pt": "",
+    "ru": "",
+    "es": "",
+    "de": ""
+  }
+]
